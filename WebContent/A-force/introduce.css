@@ -1,0 +1,509 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    font-size:16px;
+  }
+  body {
+
+  }
+  header, footer, nav, menu, article, aside, section, details, figcaption, figure{
+    display: block;
+  }
+  ul, ol {
+    list-style: none;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  img {
+    vertical-align: bottom;
+  }
+  a img {
+    border: none;
+  }
+  strong {
+    font-weight: normal;
+  }
+  i{
+    font-style: normal;
+  }
+
+  .wallpaper{
+
+    width: 100%;
+    height: 1000px;
+
+  }
+
+  header{
+
+    position: fixed;
+    top:50px;
+    width:100%;
+    color: #000;
+    z-index:5;
+
+  }
+
+  .header-wrapper{
+
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+  }
+
+  .header-left{
+
+    font-size:50px;
+    width:800px;
+    
+  }
+
+  .header-right{
+
+    position: absolute;
+    top:0px;
+    right:0;
+    z-index:6;
+    font-size:50px;
+
+  }
+
+  .header-right-bottom{
+
+    position: absolute;
+    top:620px;
+    right:0px;
+    z-index:6;
+    font-size:50px;
+
+  }
+  
+  .fab{
+
+    float: right;
+    padding-right:40px;
+    color: rgb(122, 88, 83);
+
+  }
+
+  .fas{
+
+    float: right;
+    padding-right:40px;
+    color: rgb(117, 153, 187);
+
+  }
+
+  .info{
+
+    font-family: 'Permanent Marker', cursive;
+    font-weight:bold;
+    letter-spacing:7px;
+    padding:20px;
+    margin:20px;
+    color: rgb(122, 88, 83);
+
+  }
+
+  a{
+    
+    text-decoration: none;
+
+  }
+
+  a:hover{
+
+    text-decoration: underline;
+    color:rgb(49, 65, 80);
+
+  }
+
+  .container-photo{
+
+    position: relative;
+    height:850px;
+    width: 100%;
+    z-index:10;
+    background-color:rgb(230, 204, 204);
+
+  }
+
+
+  .container{
+
+    position: relative;
+    height:870px;
+    width: 100%;
+    z-index:10;
+    background-color:rgb(230, 204, 204);
+
+  }
+
+  .container-left{
+
+    position:absolute;
+    top: 130px;
+    left: 170px;
+
+  }
+
+  .container-right{
+
+    position:absolute;
+    top: 60px;
+    right: 120px;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-family: "Klee","クレー";
+
+  }
+
+  .rightPage{
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 5px rgb(122, 88, 83);;
+    border-bottom: solid 5px rgb(122, 88, 83);;
+  }
+
+  .rightPage:before, .rightPage:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 5px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: rgb(122, 88, 83);;
+  }
+
+  .rightPage:before {
+    left: 10px;
+  }
+
+  .rightPage:after {
+    right: 10px;
+  }
+
+  .rightPage p{
+
+    font-size:25px;
+    font-weight: normal;
+    text-align: left;
+    margin: 0; 
+    padding: 0;
+
+  }
+
+　#topPage{
+
+    position:absolute;
+    bottom:80px;
+    z-index:10;
+
+}
+
+  .myself{
+
+    width: 500px;
+    height: 650px;
+    border-radius:10px;
+  }
+
+  .myself2{
+
+    width: 525px;
+    height: 350px;
+    border-radius:10px;
+  }
+
+  #splash {
+    /*fixedで全面に固定*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background:#333;
+  text-align:center;
+  color:#fff;
+}
+
+.slider{
+
+  position: absolute;
+  top:150px;
+
+
+}
+
+.photos{
+
+  border-radius:10px;
+
+
+}
+
+.subtitle{
+
+  text-align:center;
+  font-size:50px;
+  font-family: 'Permanent Marker', cursive;
+  position: absolute;
+  top:10px;
+  width:100%;
+  margin:0 auto;
+  color: rgb(122, 88, 83);
+
+}
+
+.footer{
+
+  position: absolute;
+  bottom:5px;
+  left:42%;
+  background-color: rgb(230, 204, 204);
+  font-family: 'Permanent Marker', cursive;
+  color:rgb(122, 88, 83);
+
+
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+#contents{
+    width:100%;
+    height: 100vh;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+a{
+    color: #333;
+}
+
+a:hover{
+     text-decoration: none;   
+}
+
+h2,p {
+  text-align:center;
+  padding:20px;
+}
+
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+    top:110px;
+}
+
+.slider img {
+    width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+}
+
+.slider .slick-slide {
+  transform: scale(0.8);/*左右の画像のサイズを80%に*/
+  transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+  transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+  opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#eee;
+}
+
+h2,p {
+    text-align:center;
+    padding:20px;
+}
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #333;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width:94%;
+  margin:0 auto;
+}
+
+.slider img {
+  width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height:auto;
+}
+
+.slider .slick-slide {
+transform: scale(0.8);/*左右の画像のサイズを80%に*/
+transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;/*矢印の色*/
+  border-right: 2px solid #666;/*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align:center;
+margin:20px 0 0 0;
+}
+
+.slick-dots li {
+  display:inline-block;
+margin:0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:8px;/*ドットボタンのサイズ*/
+  height:8px;/*ドットボタンのサイズ*/
+  display:block;
+  border-radius:50%;
+  background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+  background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+h2,p {
+  text-align:center;
+  padding:20px;
+}
+
+ul{
+margin:0;
+padding: 0;
+list-style: none;
+}
+
+a{
+color: #333;
+}
+
+a:hover,
+a:active{
+text-decoration: none;
+}
+
+
